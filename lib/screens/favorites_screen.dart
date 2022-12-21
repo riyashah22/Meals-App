@@ -17,15 +17,15 @@ class FavoritesScreen extends StatelessWidget {
       return ListView.builder(
         itemBuilder: (ctx, index) {
           return MealItem(
-            id: favoriteMeals?[index].id as String,
-            title: favoriteMeals?[index].title as String,
-            imageUrl: favoriteMeals?[index].imageUrl as String,
-            affordability: favoriteMeals?[index].affordability as Affordability,
-            complexity: favoriteMeals?[index].complexity as Complexity,
-            duration: favoriteMeals?[index].duration as int,
+            id: favoriteMeals[index].id as String,
+            title: favoriteMeals[index].title as String,
+            imageUrl: favoriteMeals[index].imageUrl as String,
+            affordability: favoriteMeals[index].affordability as Affordability,
+            complexity: favoriteMeals[index].complexity as Complexity,
+            duration: favoriteMeals[index].duration as int,
           );
         },
-        itemCount: favoriteMeals?.length,
+        itemCount: favoriteMeals.length,
       );
     }
   }
